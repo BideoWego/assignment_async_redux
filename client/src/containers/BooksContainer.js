@@ -1,20 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Books from '../components/Books';
-import { getBooks } from '../actions';
 
 
-class BooksContainer extends React.Component {
-  componentDidMount() {
-    this.props.getBooks();
-  }
-
-
-  render() {
-    const { books } = this.props;
-    return <Books books={ books } />;
-  }
-}
+const BooksContainer = ({ books }) => <Books books={ books } />;
 
 
 const mapStateToProps = state => {
@@ -26,11 +15,7 @@ const mapStateToProps = state => {
 
 
 const mapDispatchToProps = dispatch => {
-  return {
-    getBooks: () => {
-      dispatch(getBooks());
-    }
-  };
+  return {};
 };
 
 

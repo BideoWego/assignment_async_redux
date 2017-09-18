@@ -26,12 +26,16 @@ export function requestFailed(error) {
 }
 
 
-export function getBooks() {
+export function getBooks(q) {
   return async dispatch => {
     dispatch(requesting());
 
+    // q = encodeURIComponent(q);
+
+    console.log(q);
+
     try {
-      let response = await fetch('/api/v1/search?q=Star');
+      let response = await fetch(`/api/v1/search?q=${ q }`);
       let json = await response.json();
       dispatch(requestSucceeded(json));
     } catch(e) {

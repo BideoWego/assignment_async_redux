@@ -2,11 +2,19 @@ import React from 'react';
 import _ from 'lodash';
 
 
-// id
-// pubDate
-// title
-// author
-// image
+function createDecks(books) {
+  let decks = <p className="text-danger">No books...</p>;
+  if (books.length) {
+    let bookElements = books.map(book => <Book key={ book.id } book={ book } />);
+    let chunks = _.chunk(bookElements, 4);
+    decks = chunks.map((chunk, index) => (
+      <div key={ index } className="card-deck">{ chunk }</div>
+    ));
+  }
+
+  return decks;
+}
+
 
 const Book = ({ book }) => (
   <div className="Book card">
@@ -23,11 +31,7 @@ const Book = ({ book }) => (
 
 
 const Books = ({ books, isFetching }) => {
-  let bookElements = books.map(book => <Book key={ book.id } book={ book } />);
-  let chunks = _.chunk(bookElements, 4);
-  let decks = chunks.map(chunk => (
-    <div className="card-deck">{ chunk }</div>
-  ));
+  let decks = createDecks(books);
   let loading = <p>Loading...</p>;
 
   return (
