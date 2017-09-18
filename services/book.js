@@ -80,7 +80,7 @@ function parseShowResults(json) {
 const Book = {};
 
 
-Book.search = async (q) => {
+Book.search = async q => {
   const query = qs.stringify({ key: GOODREADS_API_KEY, q });
   let response = await fetch(`${ GOODREADS_BASE_URL }/search?${ query }`);
   let text = await response.text();
@@ -90,7 +90,7 @@ Book.search = async (q) => {
 };
 
 
-Book.find = async (id) => {
+Book.find = async id => {
   let response = await fetch(
     `${ GOODREADS_BASE_URL }/book/show/${ id }.xml?key=${ GOODREADS_API_KEY }`
   );

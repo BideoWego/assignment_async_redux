@@ -1,21 +1,26 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import BooksContainer from './containers/BooksContainer';
+
 
 class App extends Component {
   render() {
+    const appName = 'Hello Books!'
+    document.title = appName;
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      <main className="App">
+        <h1>{ appName }</h1>
+        <BooksContainer />
+      </main>
     );
   }
 }
 
+
+
+
 export default App;
+
+
+
+
+
