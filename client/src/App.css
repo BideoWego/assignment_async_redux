@@ -1,7 +1,13 @@
 
 
+a:hover,
 *[role="button"] {
   cursor: pointer;
+}
+
+a.BookLink {
+  color: blue;
+  text-decoration: underline;
 }
 
 

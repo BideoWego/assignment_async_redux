@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import BooksContainer from './containers/BooksContainer';
 import SearchContainer from './containers/SearchContainer';
+import BookContainer from './containers/BookContainer';
 
 
 class App extends Component {
@@ -8,9 +9,10 @@ class App extends Component {
     const appName = 'Hello Books!'
     document.title = appName;
     return (
-      <main className="App container">
+      <main id="app" className="App container">
         <h1>{ appName }</h1>
         <SearchContainer />
+        <BookContainer />
         <BooksContainer />
       </main>
     );

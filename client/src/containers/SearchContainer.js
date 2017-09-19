@@ -20,7 +20,7 @@ const mapDispatchToProps = dispatch => {
     search: (e) => {
       e.preventDefault();
       let form = serialize(e.target, { hash: true });
-      console.log(form);
+      console.log(e.target);
       if (form.q) {
         dispatch(getBooks(form.q));
       }
