@@ -21,7 +21,7 @@ function createDecks(books, onBookLinkClick) {
 
 const BookCard = ({ book, onBookLinkClick }) => (
   <div className="BookCard card">
-    <img className="card-img-top" src={ book.image } alt="Card image cap" />
+    <img className="card-img-top" src={ book.image } alt="Card cap" />
     <div className="card-body">
       <h4 className="card-title">
         <BookLink id={ book.id } onClick={ onBookLinkClick }>

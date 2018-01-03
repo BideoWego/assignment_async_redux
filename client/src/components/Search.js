@@ -7,7 +7,7 @@ const Search = ({ onClick }) => {
       <div className="input-group">
         <input name="q" type="text" className="form-control" placeholder="Search for books..."/>
         <span className="input-group-btn">
-          <button className="btn btn-secondary" type="submit" role="button">
+          <button className="btn btn-secondary" type="submit">
             Submit
           </button>
         </span>
