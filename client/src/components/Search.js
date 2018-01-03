@@ -1,9 +1,9 @@
 import React from 'react';
 
 
-const Search = ({ onClick }) => {
+const Search = ({ search }) => {
   return (
-    <form onSubmit={ onClick }>
+    <form onSubmit={ search }>
       <div className="input-group">
         <input name="q" type="text" className="form-control" placeholder="Search for books..."/>
         <span className="input-group-btn">

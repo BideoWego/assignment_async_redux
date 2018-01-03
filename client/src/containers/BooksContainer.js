@@ -1,15 +1,6 @@
-import React from 'react';
 import { connect } from 'react-redux';
 import Books from '../components/Books';
 import { getBook } from '../actions';
-
-
-const BooksContainer = ({ books, isFetching, onBookLinkClick }) => (
-  <Books
-    books={ books }
-    isFetching={ isFetching }
-    onBookLinkClick={ onBookLinkClick } />
-);
 
 
 const mapStateToProps = state => {
@@ -41,7 +32,7 @@ const mapDispatchToProps = dispatch => {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(BooksContainer);
+)(Books);
 
 
 

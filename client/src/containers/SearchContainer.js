@@ -1,11 +1,7 @@
-import React from 'react';
 import { connect } from 'react-redux';
 import Search from '../components/Search';
 import { getBooks } from '../actions';
 import serialize from 'form-serialize';
-
-
-const SearchContainer = ({ search }) => <Search onClick={ search } />
 
 
 const mapStateToProps = state => {
@@ -35,7 +31,7 @@ const mapDispatchToProps = dispatch => {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(SearchContainer);
+)(Search);
 
 
 

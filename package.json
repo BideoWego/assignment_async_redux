@@ -6,7 +6,7 @@
   "author": "Bideo Wego <bideowego@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "which nodemon > /dev/null && nodemon server.js || node server.js"
+    "start": "nodemon server.js"
   },
   "dependencies": {
     "body-parser": "^1.18.1",

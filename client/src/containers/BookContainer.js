@@ -1,15 +1,6 @@
-import React from 'react';
 import { connect } from 'react-redux';
 import Book from '../components/Book';
 import { closeModal } from '../actions';
-
-
-const BookContainer = ({ book, isOpenModal, onCloseModalClick }) => (
-  <Book
-    book={ book }
-    isOpenModal={ isOpenModal }
-    onCloseModalClick={ onCloseModalClick } />
-);
 
 
 const mapStateToProps = state => {
@@ -33,7 +24,7 @@ const mapDispatchToProps = dispatch => {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(BookContainer);
+)(Book);
 
 
 
